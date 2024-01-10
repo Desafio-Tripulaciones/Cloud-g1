@@ -8,3 +8,6 @@ Por otro lado, elegida la platarfoma en la nube donde vamos a trabajar, en este 
 
 ## DÍA 2.
 
+Durante el segundo día hemos recibido una aplicación sencilla de parte de Fullstack para poder ir haciendo pruebas y levantar dicha aplicación en GCP. Con ello podremos ver los requerimientos necesarios que Fullstack iré necesitando a medida que nos vayan aportando actualizaciones y mejoras en la aplicación web. Dockerizamos la aplicación recibida para crear una imagen de esta y preparar una cloudbuild que automatice la creación de una istancia en **Cloud Run** para levantar la aplicación mediante un trigger que hace que se construya el frontend de esta, siempre que se actualice la rama main del proyecto donde se encuentra el código de Fullstack y sus actualizaciones. 
+
+Por otro lado hemos provisto al grupo de Data de una base de datos relacional SQL **PostgreSQL 15**, levantando una instancia para ello. Les facilitamos una IP pública, usuario y contraseña para que puedan conectarlo con **pgAdmin** que es la herramienta que ellos utilizarán para la creación y diseño del contenido de la Base de Datos.
