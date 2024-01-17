@@ -34,17 +34,21 @@ La decisión de implementar esta organización y estructura de repositorio se ba
 
 Este enfoque organizativo, respaldado por una cuidadosa asignación de permisos, sienta las bases para un trabajo eficiente y colaborativo, asegurando que cada miembro de la organización pueda contribuir de manera efectiva a su vertical específica, al tiempo que mantiene la cohesión del proyecto en su conjunto.
 
-![repositorio-submodulos](img/organizacion_submodulos.png)
+![Alt text](img/Repo.png)
+![Alt text](img/Repo2.png)
+![Alt text](img/Repo3.png)
 
 En paralelo, una vez que hemos seleccionado la plataforma en la nube para llevar a cabo nuestro trabajo, específicamente Google Cloud, hemos dado un paso crucial hacia la configuración efectiva de nuestro entorno de desarrollo. En este contexto, hemos establecido un proyecto dedicado exclusivamente para el Desafío. Esta acción no solo facilita la gestión y la organización de los recursos asociados con el proyecto, sino que también establece un marco de trabajo claro y estructurado para todas las etapas de desarrollo.
 
 Además, como parte de una práctica prudente de gestión financiera, hemos implementado una alerta de presupuesto dentro de la plataforma. Esta alerta está diseñada para supervisar de cerca los gastos que se puedan generar durante el desarrollo del proyecto. La creación de esta alerta de presupuesto no solo refleja nuestro compromiso con la transparencia y la responsabilidad en el uso de recursos, sino que también nos proporciona un mecanismo proactivo para controlar y ajustar nuestras actividades en función de las consideraciones financieras.
 
+![Alt text](img/Alerta_presupuesto.png)
+
 Este enfoque estratégico hacia la administración del presupuesto no solo busca evitar sorpresas inesperadas en términos de costos, sino que también contribuye a una toma de decisiones informada y eficiente. La implementación de esta alerta de presupuesto demuestra nuestro compromiso con la optimización de recursos, asegurando que cada gasto esté alineado con los objetivos y las metas del proyecto.
 
 En resumen, la selección de Google Cloud como plataforma, la creación del proyecto dedicado y la implementación de una alerta de presupuesto forman parte integral de nuestra estrategia para asegurar un desarrollo fluido y eficiente, combinando tecnología avanzada con una gestión financiera rigurosa.
 
-![proyecto](img/proyecto.png)
+![Alt text](img/proyect_GCP.png)
 
 ### Paso 2.
 
@@ -58,7 +62,7 @@ Este enfoque de automatización no solo agiliza el proceso de despliegue, sino q
 
 En resumen, el paso 2 está marcado por la preparación meticulosa de la aplicación para la implementación en GCP, destacando la importancia de la automatización y la integración continua en nuestro enfoque de desarrollo. Este proceso nos posiciona para una gestión eficiente y ágil a medida que avanzamos en el desarrollo y mejora de la aplicación web.
 
- ![proyecto](img/cloud%20build.png)
+ ![Alt text](img/create_trigger.png)
 
 En paralelo, hemos dotado al equipo de Data con una infraestructura de base de datos altamente eficiente al proporcionar una instancia de **Cloud SQL para PostgreSQL 15**, un recurso completamente administrado en Google Cloud Platform (GCP). Esta elección refuerza nuestra estrategia al proporcionar una solución escalable y segura para las necesidades de base de datos del proyecto.
 
@@ -70,7 +74,7 @@ Este enfoque integral en la infraestructura de datos no solo demuestra nuestro c
 
 En resumen, la provisión de una instancia **Cloud SQL para PostgreSQL 15** junto con la implementación de **pgAdmin** establece una base sólida para la gestión de datos en el proyecto, brindando al equipo de Data las herramientas necesarias para realizar su trabajo de manera efectiva y colaborativa.
 
-![proyecto](img/Postgresql.png)
+![Alt text](img/bbdd.png)
 
 En una iniciativa paralela, hemos avanzado en la asignación de permisos específicos al grupo de Ciberseguridad para otorgarles acceso de lectura a la infraestructura en la nube. Este paso estratégico facilita la capacidad del equipo de Ciberseguridad para llevar a cabo evaluaciones exhaustivas, identificando y analizando posibles riesgos asociados a los servicios creados.
 
