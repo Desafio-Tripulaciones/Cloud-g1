@@ -20,6 +20,8 @@ La gestión de datos estará a cargo de una base de datos PostgreSQL gestionada 
 
 ### 4. Aplicación para Webscraping en Cloud Run
 
+Para llevar a cabo la implementación del script de webscraping proporcionado por la vertical de Data, hemos elegido montarlo en un entorno de ejecución altamente escalable y eficiente, específicamente, un recurso de **Cloud Run**. Previamente, hemos contenerizado este script mediante Docker y gestionado su despliegue de manera automatizada a través de Cloud Build.
+
 ## Pasos a seguir:
 
 ### Paso 1.
@@ -79,3 +81,46 @@ Esta medida no solo refleja nuestro compromiso con la seguridad del proyecto, si
 Además, este enfoque proactivo hacia la seguridad refuerza la solidez y la confiabilidad de la infraestructura en la nube. La cooperación entre los equipos técnicos y de Ciberseguridad crea un marco integral que aborda la seguridad como un aspecto crítico y continuo del desarrollo del proyecto.
 
 En resumen, la concesión de permisos de lectura al grupo de Ciberseguridad demuestra nuestro compromiso con la seguridad desde el inicio del proyecto, permitiendo evaluaciones proactivas y fortaleciendo la robustez de la infraestructura en la nube creada. Este enfoque estratégico asegura que la seguridad sea una consideración central en todas las etapas del desarrollo y la implementación.
+
+### Paso 3.
+
+Para llevar a cabo la implementación del script de webscraping proporcionado por la vertical de Data, hemos elegido montarlo en un entorno de ejecución altamente escalable y eficiente, específicamente, un recurso de **Cloud Run**. Previamente, hemos contenerizado este script mediante Docker y gestionado su despliegue de manera automatizada a través de Cloud Build.
+
+Este enfoque proporciona una solución ágil y modular para ejecutar tareas de webscraping, aprovechando las características de escalabilidad inherentes a Cloud Run. Al contenerizar el script, aseguramos que todas las dependencias y configuraciones necesarias estén encapsuladas, facilitando así su implementación consistente en diferentes entornos.
+
+El script en cuestión se encuentra integrado en el código fuente de Fullstack, ubicado en un directorio específico separado del frontend y el backend. Este enfoque estructurado permite una organización clara y facilita la gestión y mantenimiento independiente de cada componente. Además, el script reside en la rama de desarrollo de Fullstack, lo que garantiza que las actualizaciones y mejoras se realicen de manera iterativa y controlada.
+
+La elección de Cloud Run como plataforma de ejecución refleja nuestra atención a la eficiencia y la escalabilidad. Al utilizar Cloud Build para la automatización del despliegue, nos aseguramos de que cualquier cambio en el código fuente, especialmente en la rama de desarrollo, active automáticamente la construcción y despliegue del script de webscraping en Cloud Run.
+
+Este enfoque integral en la implementación de scripts de webscraping demuestra nuestro compromiso con la eficiencia operativa y la arquitectura moderna. La combinación de contenerización, Cloud Build y Cloud Run establece un flujo de trabajo robusto que garantiza la disponibilidad y el rendimiento óptimo de esta tarea específica en el contexto del desarrollo de Fullstack.
+
+En resumen, la elección de Cloud Run, Docker y Cloud Build para implementar el script de webscraping enfatiza nuestro compromiso con la eficiencia, escalabilidad y modularidad en el desarrollo de Fullstack, asegurando una ejecución confiable y consistente de esta tarea clave.
+
+### Paso 4.
+
+En la fase de desarrollo, hemos orquestado una robusta infraestructura de pruebas en Google Cloud Platform (GCP) mediante la implementación de dos flujos de **Cloud Build** específicos: uno destinado al servidor (backend) y otro al cliente (frontend). Ambos flujos están intrínsecamente vinculados a triggers individuales que activan las compilaciones en la nube, conectadas al repositorio de Fullstack, y más específicamente, a la rama de desarrollo (DEV). Este diseño posibilita la ejecución continua de pruebas y la implementación inmediata de modificaciones propuestas, proporcionando una retroalimentación visual instantánea a todo el equipo de Fullstack.
+
+En paralelo, hemos replicado este enfoque en una segunda pareja de flujos de **Cloud Build**, esta vez configurados para operar exclusivamente en la rama de producción (main) del repositorio de GitHub de nuestra organización. Cabe destacar que hemos aplicado medidas de protección a esta rama, restringiendo su gestión únicamente a nuestra vertical de Cloud. Esta salvaguarda se ha implementado para preservar la estabilidad y la integridad de la rama de producción hasta que las pruebas en la rama de desarrollo sean concluyentes.
+
+La segregación entre las ramas de desarrollo y producción establece un entorno controlado para la iteración y las pruebas continuas. Una vez que las pruebas en la rama de desarrollo alcancen la conclusión satisfactoria y se logre la estabilidad deseada, procederemos a realizar una actualización de la rama de producción (main). Este proceso desencadenará la implementación de los recursos finales en **Cloud Run** en GCP, marcando la transición efectiva de las pruebas al entorno de producción.
+
+Este enfoque estratégico no solo garantiza una implementación fluida y controlada de cambios en la infraestructura, sino que también establece una sólida estructura de gestión del flujo de trabajo en el desarrollo de Fullstack. La integración de **Continuous Integration (CI)**, **Continuous Deployment (CD)**, los triggers selectivos y la protección de la rama de producción reflejan nuestro compromiso con las mejores prácticas de desarrollo, asegurando la estabilidad y la calidad del producto final de manera consistente.
+
+### Paso 5.
+
+En una estrategia paralela, hemos establecido dos flujos de **Cloud Build** dedicados a la creación del recurso de **Cloud Run** destinado a ejecutar el script de webscraping. Siguiendo una estructura coherente con los flujos previamente mencionados, hemos incorporado dos triggers independientes: uno para la rama de desarrollo (dev) y otro para la rama de producción (main). Esta configuración nos permite gestionar de manera óptima las implementaciones en diferentes entornos y fases del desarrollo.
+
+En sintonía con las prácticas adoptadas en la organización de GitHub, especialmente en el repositorio de Fullstack, la rama de producción (main) se encuentra protegida. Analogamente, en **Cloud Build** en GCP, los triggers asociados a los flujos de producción permanecen deshabilitados de manera predeterminada. Esta precaución se toma con el propósito de salvaguardar la estabilidad y la integridad del entorno de producción, garantizando que los despliegues no se realicen hasta que las pruebas y las actualizaciones en la rama de desarrollo hayan concluido de manera satisfactoria y sean consideradas estables.
+
+Esta metodología respalda un enfoque controlado y eficiente para la gestión de recursos críticos como el **Cloud Run** destinado al script de webscraping. Los triggers vinculados a los flujos de producción actúan como una barrera de seguridad, asegurando que la implementación en el entorno de producción se lleve a cabo únicamente cuando todas las validaciones previas han sido exitosas. Este proceso, alineado con las mejores prácticas de desarrollo, asegura una transición fluida y segura de las fases de desarrollo a producción.
+
+### Paso 6.
+
+Una vez completados meticulosamente todos los pasos previos y realizadas las pruebas necesarias en el entorno de desarrollo, nos disponemos a iniciar las pruebas en el despliegue de la aplicación web en **Cloud Run** en el entorno de producción. En este momento, optaremos por un enfoque manual desde la consola de Google Cloud en **Cloud Build**, sin activar aún los triggers ni realizar despliegues automáticos. Este enfoque nos proporciona un control detallado sobre el proceso y permite una evaluación minuciosa antes de la implementación automática.
+
+Además de la ejecución manual, configuraremos un nombre significativo para la URL del cliente (frontend), alineado con la identidad del proyecto y la empresa destinataria de la aplicación web. En este caso, el nombre seleccionado para que aparezca en la URL del frontend de producción, la aplicación final y definitiva, será "severalenergy-g1". Esta elección garantiza que, una vez desplegada la aplicación web, sea fácilmente reconocida e identificada con la empresa "Several Energy", añadiendo un toque de profesionalismo y coherencia corporativa.
+
+Al finalizar este proceso, habremos configurado un total de seis recursos de **Cloud Run** funcionando para la aplicación web en Google Cloud Platform (GCP). Dos de ellos están destinados al entorno de desarrollo (frontend y backend), otros dos para el entorno de producción (frontend y backend), y los dos restantes están dedicados al script de webscraping, uno para el entorno de desarrollo y otro para el entorno de producción.
+
+Este enfoque meticuloso y bien estructurado asegura una transición controlada de las pruebas en desarrollo al entorno de producción. La personalización de la URL del frontend agrega una capa adicional de profesionalismo y facilita la identificación de la aplicación web con la empresa cliente. El resultado final será un despliegue eficiente y preciso de los recursos de **Cloud Run**, listos para satisfacer las necesidades y expectativas tanto en los entornos de desarrollo como en producción.
+
