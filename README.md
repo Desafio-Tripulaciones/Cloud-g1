@@ -1,7 +1,5 @@
 ![cabecera](img/CABECERA2.png)
 
-# CLOUD-G1. DESAFÍO DE TRIPULACIONES. THE BRIDGE
-
 ## Descripción del Proyecto
 
 Este proyecto tiene como objetivo proporcionar una infraestructura eficiente en la nube utilizando Google Cloud Platform (GCP). Nuestro equipo se centrará en implementar un sistema completo que incluye un frontend y un backend, ambos desplegados de forma independiente en Cloud Run, y una base de datos PostgreSQL gestionada por GCP SQL.
