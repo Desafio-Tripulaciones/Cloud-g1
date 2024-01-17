@@ -1,3 +1,5 @@
+![cabecera](img/CABECERA2.png)
+
 # CLOUD-G1. DESAFÍO DE TRIPULACIONES. THE BRIDGE
 
 ## Descripción del Proyecto
@@ -106,6 +108,8 @@ La segregación entre las ramas de desarrollo y producción establece un entorno
 
 Este enfoque estratégico no solo garantiza una implementación fluida y controlada de cambios en la infraestructura, sino que también establece una sólida estructura de gestión del flujo de trabajo en el desarrollo de Fullstack. La integración de **Continuous Integration (CI)**, **Continuous Deployment (CD)**, los triggers selectivos y la protección de la rama de producción reflejan nuestro compromiso con las mejores prácticas de desarrollo, asegurando la estabilidad y la calidad del producto final de manera consistente.
 
+![triggers](img/triggers.png)
+
 ### Paso 5.
 
 En una estrategia paralela, hemos establecido dos flujos de **Cloud Build** dedicados a la creación del recurso de **Cloud Run** destinado a ejecutar el script de webscraping. Siguiendo una estructura coherente con los flujos previamente mencionados, hemos incorporado dos triggers independientes: uno para la rama de desarrollo (dev) y otro para la rama de producción (main). Esta configuración nos permite gestionar de manera óptima las implementaciones en diferentes entornos y fases del desarrollo.
@@ -123,6 +127,8 @@ Además de la ejecución manual, configuraremos un nombre significativo para la 
 Al finalizar este proceso, habremos configurado un total de seis recursos de **Cloud Run** funcionando para la aplicación web en Google Cloud Platform (GCP). Dos de ellos están destinados al entorno de desarrollo (frontend y backend), otros dos para el entorno de producción (frontend y backend), y los dos restantes están dedicados al script de webscraping, uno para el entorno de desarrollo y otro para el entorno de producción.
 
 Este enfoque meticuloso y bien estructurado asegura una transición controlada de las pruebas en desarrollo al entorno de producción. La personalización de la URL del frontend agrega una capa adicional de profesionalismo y facilita la identificación de la aplicación web con la empresa cliente. El resultado final será un despliegue eficiente y preciso de los recursos de **Cloud Run**, listos para satisfacer las necesidades y expectativas tanto en los entornos de desarrollo como en producción.
+
+![cloudrun](img/cloud-run.png)
 
 ### Ultimo paso.
 
