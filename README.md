@@ -138,7 +138,7 @@ En esta fase, presentaremos un esquema visual detallado que ilustra la arquitect
 
 ### Arquitectura en la Nube de Google Cloud
 
-![Arquitectura en la Nube de Google Cloud](img/diagrama.png)
+![Alt text](img/Diagrama_Arquitectura_G1.png)
 
 **Descripción:**
 1. **Organización GitHub:** Iniciamos con la organización en GitHub, donde se gestionan los repositorios y se lleva a cabo el desarrollo colaborativo.

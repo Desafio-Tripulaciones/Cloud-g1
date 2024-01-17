@@ -47,7 +47,7 @@
 
 - **Presentación del Esquema Visual:** "Concluimos mostrando un esquema visual detallado de la arquitectura y el flujo de trabajo en Google Cloud."
 
-
+![Alt text](img/Diagrama_Arquitectura_G1.png)
 
 ## Conclusiones y Beneficios
 
