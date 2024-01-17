@@ -1,3 +1,5 @@
+![Alt text](img/CABECERA1.png)
+
 # Guion de Presentación:
 
 ## Introducción
