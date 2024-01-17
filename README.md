@@ -124,3 +124,34 @@ Al finalizar este proceso, habremos configurado un total de seis recursos de **C
 
 Este enfoque meticuloso y bien estructurado asegura una transición controlada de las pruebas en desarrollo al entorno de producción. La personalización de la URL del frontend agrega una capa adicional de profesionalismo y facilita la identificación de la aplicación web con la empresa cliente. El resultado final será un despliegue eficiente y preciso de los recursos de **Cloud Run**, listos para satisfacer las necesidades y expectativas tanto en los entornos de desarrollo como en producción.
 
+### Ultimo paso.
+
+En esta fase, presentaremos un esquema visual detallado que ilustra la arquitectura y el flujo de trabajo en la plataforma de Google Cloud. Este diagrama proporcionará una visión integral de la infraestructura en la nube que hemos implementado, así como una representación gráfica del proceso de trabajo que sigue el proyecto.
+
+### Arquitectura en la Nube de Google Cloud
+
+![Arquitectura en la Nube de Google Cloud](URL_DE_LA_IMAGEN)
+
+**Descripción:**
+1. **Organización GitHub:** Iniciamos con la organización en GitHub, donde se gestionan los repositorios y se lleva a cabo el desarrollo colaborativo.
+  
+2. **Flujo de Desarrollo:** La rama de desarrollo (DEV) en el repositorio de Fullstack es el punto de inicio para el desarrollo continuo. Aquí, los equipos colaboran en la implementación de nuevas funcionalidades y correcciones.
+
+3. **Cloud Build - Desarrollo:** Se ha implementado un flujo de **Continuous Integration (CI)** mediante Cloud Build para el entorno de desarrollo. Este flujo se activa automáticamente con cada cambio en la rama de desarrollo, garantizando la integración continua y la detección temprana de posibles problemas.
+
+4. **Cloud Run - Desarrollo:** Los servicios frontend y backend se despliegan en Cloud Run en el entorno de desarrollo. Este entorno permite pruebas exhaustivas antes de la implementación en producción.
+
+5. **Cloud Build - Producción:** Una vez que las pruebas en el entorno de desarrollo son satisfactorias, el flujo de CI se extiende al entorno de producción. Los triggers asociados a la rama de producción (main) activan la construcción y despliegue automáticos en Cloud Run.
+
+6. **Cloud Run - Producción:** Los servicios frontend y backend finales se despliegan en Cloud Run en el entorno de producción, listos para su disponibilidad pública.
+
+7. **Web Scraping:** El script de webscraping sigue un proceso similar, con flujos de CI y despliegue tanto para desarrollo como para producción, asegurando su correcto funcionamiento en ambas fases.
+
+### Beneficios del Esquema:
+- **Automatización Eficiente:** La implementación de flujos de CI/CD automatizados garantiza una entrega continua y eficiente de nuevas versiones.
+  
+- **Separación de Entornos:** La distinción clara entre los entornos de desarrollo y producción minimiza el riesgo y asegura la estabilidad antes de la implementación final.
+
+- **Escalabilidad y Mantenimiento:** Cloud Run proporciona una solución altamente escalable y de fácil mantenimiento, permitiendo adaptarse a las demandas del tráfico y aplicar actualizaciones de manera ágil.
+
+Este esquema visual no solo ofrece una representación clara de la arquitectura en la nube, sino que también destaca la implementación de prácticas avanzadas de desarrollo y despliegue que garantizan un proceso fluido y confiable en Google Cloud.
