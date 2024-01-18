@@ -4,7 +4,7 @@
 
 ## Introducción
 
-- **Saludo y Presentación:** "Saludos a todes"
+- **Saludo y Presentación:** "Buenos días a todos"
 - **Contexto del Proyecto:** "Hoy compartiremos nuestro proyecto en Google Cloud Platform, centrado en establecer una infraestructura eficiente y escalable para una aplicación web."
 
 ## Organización y Configuración Inicial
